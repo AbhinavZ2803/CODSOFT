@@ -10,9 +10,8 @@ private:
 
 public:
     GuessMaster() {
-        srand(static_cast<unsigned int>(time(0)));  // Seed for random number generation
-        secretNumber = rand() % 100 + 1;  // Secret number between 1 and 100
-        playerGuess = 0;
+        srand(static_cast<unsigned int>(time(0)));  
+        secretNumber = rand() % 100 + 1;  
         attempts = 0;
     }
 
@@ -49,7 +48,7 @@ int main() {
 
         std::cout << "---------------------------\n";
 
-        // Check if the player wants to play again
+     
         char playAgain;
         std::cout << "Do you want to play again? (y/n): ";
         std::cin >> playAgain;
@@ -58,7 +57,7 @@ int main() {
             std::cout << "Thank you for playing GuessMaster! Goodbye!\n";
             break;
         } else {
-            // Reset the game for a new round
+          
             game = GuessMaster();
             game.welcomeMessage();
         }
